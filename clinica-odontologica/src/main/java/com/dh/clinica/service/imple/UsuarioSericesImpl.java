@@ -1,6 +1,6 @@
 package com.dh.clinica.service.imple;
 
-import com.dh.clinica.dto.UserDto;
+import com.dh.clinica.dto.UsuarioDto;
 import com.dh.clinica.entities.Usuario;
 import com.dh.clinica.repository.UsuarioRepository;
 import com.dh.clinica.service.UsuarioService;
@@ -19,24 +19,25 @@ public class UsuarioSericesImpl implements UsuarioService {
 
 
     @Override
-    public UserDto save(Usuario user) {
-        Usuario user = usuarioRepository.save(user);
-        UserDto userDto = mapper.convertValue(user,UserDto.class);
-        return ;
+    public Usuario save(Usuario usuario) {
+        Usuario usuarioFromDb = usuarioRepository.save(usuario);
+        return
+        UsuarioDto usuarioDto = mapper.convertValue(usuario, UsuarioDto.class);
+        ;
     }
 
     @Override
-    public void delete(UserDto user) {
+    public void delete(UsuarioDto user) {
 
     }
 
     @Override
-    public UserDto get(UserDto user) {
+    public UsuarioDto get(UsuarioDto user) {
         return null;
     }
 
     @Override
-    public UserDto uddate(UserDto user) {
+    public UsuarioDto uddate(UsuarioDto user) {
         return null;
     }
 }
